@@ -32,7 +32,7 @@
 							</tr>
               <?php
                 $i = 1;
-                foreach($fakultass as $fakultas):
+                foreach($fakultas as $fakultas):
               ?>
 							<tr>
 								<td><?= $i++ ?></td>
@@ -61,7 +61,7 @@
 								<div class="form-group">
 									<label class="col-md-3 control-label" for="name">RT</label>
 									<div class="col-md-9">
-                    <?= form_input('nama_fakultas', $input->nama_fakultas, ['class' => 'form-control', 'placeholder' => 'RT 00']) ?>
+                    <?= form_input('nama_fakultas', $input->fakultas, ['class' => 'form-control', 'placeholder' => 'RT 00']) ?>
 									</div>
 								</div>
 								<!-- Form actions -->

@@ -21,7 +21,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       }else{
         $nim = $this->input->post('nim', TRUE);
         $token = $this->input->post('token', TRUE);
-        $pemilih = $this->login->checkPemilih($nim, $token);
+        $pemilih = $this->login->checkPemilih($token);
 
         if(count($pemilih)){
           if ($pemilih->telah_memilih === 'tidak') {
@@ -51,7 +51,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             return;
           }
         }else{
-          $this->session->set_flashdata('error_msg', 'NIM dan/atau Token Anda Salah');
+          $this->session->set_flashdata('error_msg', 'Token Anda Salah');
           $input = (object) $this->input->post(null, TRUE);
           $this->load->view('bem/login', compact('input'));
         }

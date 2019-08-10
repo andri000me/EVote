@@ -89,12 +89,11 @@
 					<h2>E-VOTE</h2>
 				</div>
 				<div class="modal-body">
-					<h3>Selamat Suara Anda Telah Direkam!</h3>
+					<h3>Suara Anda Telah Direkam</h3>
 					<h4>Terima Kasih Telah Memilih</h4>
 				</div>
 				<div class="modal-footer">
 					<a href="<?= base_url('logout') ?>" class="btn btn-danger">Logout</a>
-					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
 				</div>
 			</div>
 		</div>

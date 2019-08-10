@@ -50,8 +50,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     public function update(){
       if(!$this->input->post(null, TRUE)) redirect('fakultas');
       $id = $this->input->post('id', TRUE);
-      $fakultas['rt'] = $this->input->post('rt', TRUE);
-      $fakultas['id'] = $this->input->post('id', TRUE);
+      $fakultas['nama_fakultas'] = $this->input->post('nama_fakultas', TRUE);
+      $fakultas['id_fakultas'] = $this->input->post('id_fakultas', TRUE);
       if(!$this->fakultas->validationFakultas()){
         $fakultas = (object) $fakultas;
         $main_view = "bem/edit-fakultas";
@@ -65,8 +65,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
     // Hapus Fakultas
     public function destroy(){
-      if(!$this->input->post('id', TRUE)) redirect('fakultas');
-      $id = $this->input->post('id', TRUE);
+      if(!$this->input->post('id_fakultas', TRUE)) redirect('fakultas');
+      $id = $this->input->post('id_fakultas', TRUE);
       if($this->fakultas->deleteFakultas($id)){
         $this->session->set_flashdata('msg', 'RT Berhasil Di Hapus!');
         redirect('fakultas');

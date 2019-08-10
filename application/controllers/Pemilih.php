@@ -115,9 +115,38 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
     // Tambah Pemilih
     public function store(){
+		$id = $this->input->post('nim_pemilih');
+	
+		
       if (!$this->cekLoginAdmin()) redirect('');
       if(!$this->input->post(null, TRUE)) redirect('');
-      $input = (object) $this->input->post(null, TRUE);
+	  
+	  $this->load->library('ciqrcode'); //pemanggilan library QR CODE
+ 
+        $config['cacheable']    = true; //boolean, the default is true
+        $config['imagedir']     = './assets/qrcode/'; //direktori penyimpanan qr code
+		$config['quality']      = true; //boolean, the default is true
+		$config['size']         = '1024'; //interger, the default is 1024
+		$config['black']        = array(224,255,255); // array, default is array(255,255,255)
+		$config['white']        = array(70,130,180); // array, default is array(0,0,0)
+        $this->ciqrcode->initialize($config);
+ 
+        $image_name=md5($id).'.png'; //buat name dari qr code sesuai dengan nim
+		$params['data'] = md5($id);
+		$params['level'] = 'H'; //H=High
+		$params['size'] = 10;
+		$params['savename'] = FCPATH.$config['imagedir'].$image_name; //simpan image QR CODE ke folder assets/images/
+        $this->ciqrcode->generate($params); // fungsi untuk generate QR CODE
+ 	
+		
+	  
+      $input = array('nim_pemilih' => $this->input->post('nim_pemilih'),
+					'nama_pemilih' => $this->input->post('nama_pemilih'),	
+					'token_pemilih' => md5($id),
+					'id_fakultas' => $this->input->post('id_fakultas')	
+					);
+					
+
       if(!$this->pemilih->validationPemilih()){
         $belumMemilihs = $this->pemilih->allPemilih();
         $pemilihFakultass = $this->pemilih->pemilihFakultas(1);
@@ -129,7 +158,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       }
       $this->pemilih->insertPemilih($input);
       $this->session->set_flashdata('msg', 'Pemilih Berhasil Di Tambahkan!');
-      redirect('pemilih');
+	  
+      redirect('pemilih-admin');
     }
 
     // Hapus Pemilih
@@ -139,7 +169,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       $id = $this->input->post('id_pemilih', TRUE);
       if($this->pemilih->deletePemilih($id)){
         $this->session->set_flashdata('msg', 'Pemilih Berhasil Di Hapus!');
-        redirect('pemilih');
+        redirect('pemilih-admin');
       }
     }
 
@@ -238,6 +268,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       $main_view = 'bem/search-pemilih-admin-ajax';
       $this->load->view('template', compact('main_view', 'pemilihs', 'nim', 'nama','jumlahsearchPemilihByAdmin'));
     }
+	
+	public function generateall(){
+		$data['pemilih'] = $this->pemilih->ambildata();
+		/* var_dump($data);
+		die(); */
+       $this->load->view('v_kartu', $data);
+	}
 
 
   }

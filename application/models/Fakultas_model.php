@@ -5,33 +5,33 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
     // Mendapatkan semua data Fakultas
     public function allFakultas(){
-      return $this->db->get('rt')->result();
+      return $this->db->get('fakultas')->result();
     }
 
     public function totalFakultas(){
-      return $this->db->get('rt')->num_rows();
+      return $this->db->get('fakultas')->num_rows();
     }
 
     // Nilai bawaan form Fakultas
     public function fakultasDefaultValues(){
       return [
-        'rt' => ''
+        'fakultas' => ''
       ];
     }
 
     // Mendapatkan suatu Fakultas
     public function getFakultas($id){
-      return $this->db->where('id', $id)->get('rt')->row();
+      return $this->db->where('id_fakultas', $id)->get('fakultas')->row();
     }
 
     // Edit Fakultas
     public function updateFakultas($id, $data){
-      return $this->db->where('id', $id)->update('rt', $data);
+      return $this->db->where('id_fakultas', $id)->update('fakultas', $data);
     }
 
     // Hapus Fakultas
     public function deleteFakultas($id){
-      return $this->db->where('id', $id)->delete('rt');
+      return $this->db->where('id_fakultas', $id)->delete('fakultas');
     }
 
     // Validasi form fakultas
@@ -39,8 +39,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       $this->load->library('form_validation');
       $rules = [
         [
-          'field' => 'rt',
-          'label' => 'RT',
+          'field' => 'nama_fakultas',
+          'label' => 'fakultas',
           'rules' => 'trim|required'
         ]
       ];
@@ -51,7 +51,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
     // Menambahkan Fakultas
     public function insertFakultas($data){
-      return $this->db->insert('rt', $data);
+      return $this->db->insert('fakultas', $data);
     }
 
   }

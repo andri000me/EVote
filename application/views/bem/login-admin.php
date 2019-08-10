@@ -10,7 +10,6 @@
 	<link rel="icon" rel="icon" href="<?= base_url('assets/img/bemvotelogo.jpg') ?>">
 	<style media="screen">
 	body{
-		background-image: url(<?= base_url('assets/img/1.jpg') ?>);
 		background-repeat: no-repeat;
 		background-attachment: fixed;
 		background-position: bottom;
@@ -23,6 +22,14 @@
 	<![endif]-->
 </head>
 <body>
+<video autoplay muted loop id="myVideo" style="position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%; 
+  min-height: 100%;">
+  <source src="<?php echo site_url('assets/video/back.mp4') ?>" type="video/mp4">
+  Your browser does not support HTML5 video.
+</video>
 	<div class="row">
 		<div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-4 col-md-offset-4">
 			<div class="login-panel panel panel-default">

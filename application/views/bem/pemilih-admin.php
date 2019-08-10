@@ -34,10 +34,13 @@
                   <input type="text" class="form-control" name="nama" id="formNamaAdmin">
                 </div>
                 <button type="submit" class="btn btn-default">Cari</button>
-              <?= form_close() ?>
+				<a target="_blank" href="<?= site_url('pemilih/generateall')?>" class="btn btn-success"><span class="fa fa-print"> Generate Surat Undangan</span></a>
+				<a target="_blank" href="<?= site_url('Import/form') ?>" class="btn btn-warning"><span class="fa fa-excel">Import .Xlsx</span></a>
+			  <?= form_close() ?>
+				
 					</div>
-				</div>
 
+				</div>
         <div id="pageAJAX">
 
 				<div class="panel panel-default ">
@@ -50,7 +53,7 @@
             <table class="table">
 							<tr>
 								<th>No</th>
-								<th>NIM Pemilih</th>
+								<th>NIK Pemilih</th>
 								<th>Nama Pemilih</th>
 								<th>Status Pemilih</th>
 								<th>Telah Pemilih</th>
@@ -116,7 +119,7 @@
 						<table class="table">
 							<tr>
 								<th>No</th>
-								<th>NIM Pemilih</th>
+								<th>NIK Pemilih</th>
 								<th>Nama Pemilih</th>
 								<th>Terakhir Login</th>
                 <?php if($this->session->has_userdata('admin')): ?>
@@ -172,7 +175,7 @@
 
                 <!-- Name input-->
 								<div class="form-group">
-									<label class="col-md-3 control-label" for="name">NIM Pemilih</label>
+									<label class="col-md-3 control-label" for="name">NIK Pemilih</label>
 									<div class="col-md-9">
                     <?= form_input('nim_pemilih', $input->nim_pemilih, ['class' => 'form-control', 'placeholder' => '531416999']) ?>
 									</div>

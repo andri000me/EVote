@@ -5,12 +5,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
     // Semua data pemilih
     public function allPemilih($fakultas, $perPage = 25, $offset = 0){
-      return $this->db->select('*')->from('pemilih')->join('fakultas','pemilih.id_fakultas = fakultas.id_fakultas')->where('nama_fakultas', $fakultas)->limit($perPage, $offset)->order_by('nim_pemilih', 'ASC')->get()->result();
+      return $this->db->select('*')->from('pemilih')->join('fakultas','pemilih.id_fakultas = fakultas.id_fakultas')->where('nama_fakultas', $fakultas)->limit($perPage, $offset)->order_by('id_pemilih DESC','nim_pemilih ASC')->get()->result();
     }
 
     // Total pemilih
     public function jumlahPemilih($fakultas){
-      return $this->db->select('*')->from('pemilih')->join('fakultas','pemilih.id_fakultas = fakultas.id_fakultas')->where('nama_fakultas', $fakultas)->order_by('nim_pemilih', 'ASC')->get()->num_rows();
+      return $this->db->select('*')->from('pemilih')->join('fakultas','pemilih.id_fakultas = fakultas.id_fakultas')->where('nama_fakultas', $fakultas)->order_by('id_pemilih DESC','nim_pemilih ASC')->get()->num_rows();
     }
 
     public function jumlahBelumPemilih($fakultas){
@@ -24,7 +24,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
     // Semua data pemilih yg bisa diakses admin, dekan, rektor
     public function allPemilihAdmin($perPage = 25, $offset = 0){
-      return $this->db->select('*')->from('pemilih')->join('fakultas','pemilih.id_fakultas = fakultas.id_fakultas')->limit($perPage, $offset)->order_by('nim_pemilih', 'ASC')->get()->result();
+      return $this->db->select('*')->from('pemilih')->join('fakultas','pemilih.id_fakultas = fakultas.id_fakultas')->limit($perPage, $offset)->order_by('id_pemilih DESC','nim_pemilih ASC')->get()->result();
     }
 
     public function totalPemilihAdmin(){
@@ -115,6 +115,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
     public function jumlahsearchPemilihByAdmin($nim, $nama){
       return $this->db->select('*')->from('pemilih')->join('fakultas','pemilih.id_fakultas = fakultas.id_fakultas')->like('nim_pemilih', $nim)->like('nama_pemilih', $nama)->order_by('nim_pemilih', 'ASC')->get()->num_rows();
+    }
+	public function ambildata(){
+	 return $this->db->select('*')->from('pemilih')->join('fakultas','pemilih.id_fakultas = fakultas.id_fakultas')->order_by('fakultas.id_fakultas ASC', 'nim_pemilih ASC', 'nama_pemilih ASC')->get()->result();
     }
 
   }

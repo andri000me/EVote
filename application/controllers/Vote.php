@@ -25,7 +25,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         $this->vote->setTelahMemilih($this->session->userdata('id_pemilih'));
         $this->session->unset_userdata('pemilih');
         $this->session->set_flashdata('mencoblos', TRUE);
-        redirect('');
+		redirect('');
       }else{
         $paslons = $this->vote->allPaslon();
         $capress = $this->paslon->allCapres();

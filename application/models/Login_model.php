@@ -4,8 +4,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   class Login_model extends CI_Model{
 
     // Pengecekan nim & token pemilih
-    public function checkPemilih($nim, $token){
-      return $this->db->where('nim_pemilih', $nim)->where('token_pemilih', $token)->get('pemilih')->row();
+    public function checkPemilih($token){
+      return $this->db->where('token_pemilih', $token)->get('pemilih')->row();
     }
 
     // Pengecekan username & password admin

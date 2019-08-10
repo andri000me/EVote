@@ -11,7 +11,7 @@
  Target Server Version : 100126
  File Encoding         : 65001
 
- Date: 14/07/2019 18:53:23
+ Date: 09/08/2019 22:36:14
 */
 
 SET NAMES utf8mb4;
@@ -34,19 +34,7 @@ CREATE TABLE `admin`  (
 -- ----------------------------
 -- Records of admin
 -- ----------------------------
-INSERT INTO `admin` VALUES (1, 'Fachrul Rusli', 'fachrulrusli', 'fachrulrusli', 'admin', '2019-07-14 18:52:05');
-INSERT INTO `admin` VALUES (2, 'Ferdiansyah Usman', 'ferus123', 'ferus', 'operator-teknik', '2019-07-14 18:50:46');
-INSERT INTO `admin` VALUES (4, 'Moh. Hidayat Koniyo', 'hikon5', 'hikon5', 'dekan', '2019-07-14 18:50:46');
-INSERT INTO `admin` VALUES (5, 'Samsu Qamar Ba\'du', 'samqad7', 'samqad', 'rektor', '2019-07-14 18:50:46');
-INSERT INTO `admin` VALUES (7, 'nanko', 'nanko1', 'nan', 'operator-fekon', '2019-07-14 18:50:46');
-INSERT INTO `admin` VALUES (8, 'Hasan', 'hasan', 'hasan123', 'operator-fok', '2019-07-14 18:50:46');
-INSERT INTO `admin` VALUES (9, 'Husen', 'husen', 'husen123', 'operator-mipa', '2019-07-14 18:50:46');
-INSERT INTO `admin` VALUES (10, 'Andra', 'andra', 'andra321', 'operator-fis', '2019-07-14 18:50:46');
-INSERT INTO `admin` VALUES (12, 'Saddam', 'Saddam', 'saddam12', 'operator-fip', '2019-07-14 18:50:46');
-INSERT INTO `admin` VALUES (13, 'Yorke', 'yorke', 'yorke098', 'operator-hukum', '2019-07-14 18:50:46');
-INSERT INTO `admin` VALUES (14, 'Yoris', 'yoris', 'yoris123', 'operator-pertanian', '2019-07-14 18:50:46');
-INSERT INTO `admin` VALUES (15, 'Dayat', 'dayat', 'dayat456', 'operator-fsb', '2019-07-14 18:50:46');
-INSERT INTO `admin` VALUES (16, 'Ardy', 'ardy', 'ardy021', 'operator-fik', '2019-07-14 18:50:46');
+INSERT INTO `admin` VALUES (1, 'Fachrul Rusli', 'fachrulrusli', 'fachrulrusli', 'admin', '2019-08-09 20:12:20');
 
 -- ----------------------------
 -- Table structure for detail_capres
@@ -104,21 +92,17 @@ CREATE TABLE `fakultas`  (
   `id_fakultas` tinyint(2) NOT NULL AUTO_INCREMENT,
   `nama_fakultas` varchar(100) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
   PRIMARY KEY (`id_fakultas`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 11 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Compact;
+) ENGINE = InnoDB AUTO_INCREMENT = 13 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Compact;
 
 -- ----------------------------
 -- Records of fakultas
 -- ----------------------------
-INSERT INTO `fakultas` VALUES (1, 'Ilmu Pendidikan');
-INSERT INTO `fakultas` VALUES (2, 'MIPA');
-INSERT INTO `fakultas` VALUES (3, 'Ekonomi');
-INSERT INTO `fakultas` VALUES (4, 'Olahraga & Kesehatan');
-INSERT INTO `fakultas` VALUES (5, 'Teknik');
-INSERT INTO `fakultas` VALUES (6, 'Ilmu Sosial');
-INSERT INTO `fakultas` VALUES (7, 'Ilmu Kelautan');
-INSERT INTO `fakultas` VALUES (8, 'Pertanian');
-INSERT INTO `fakultas` VALUES (9, 'Hukum');
-INSERT INTO `fakultas` VALUES (10, 'Sastra & Budaya');
+INSERT INTO `fakultas` VALUES (1, 'RT 01');
+INSERT INTO `fakultas` VALUES (2, 'RT 02');
+INSERT INTO `fakultas` VALUES (3, 'RT 03');
+INSERT INTO `fakultas` VALUES (4, 'RT 05');
+INSERT INTO `fakultas` VALUES (5, 'RT 06');
+INSERT INTO `fakultas` VALUES (6, 'RT 04');
 
 -- ----------------------------
 -- Table structure for paslon
@@ -137,8 +121,8 @@ CREATE TABLE `paslon`  (
 -- ----------------------------
 -- Records of paslon
 -- ----------------------------
-INSERT INTO `paslon` VALUES (3, 'UNG Bersatu', 'Rian & Fahri', 'Teknik, Ilmu Sosial, Ilmu Pendidikan, Ilmu Kelautan, Hukum', '1', '<p>Visi <br>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. <br>Misi</p>\r\n<ol>\r\n<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris</li>\r\n<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris</li>\r\n<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris</li>\r\n<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris</li>\r\n<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris</li>\r\n</ol>');
-INSERT INTO `paslon` VALUES (4, 'Menuju PERUBAHAN!', 'Kris & Lisa', 'Pertanian, Olahraga & Kesehatan, Ilmu Sastra & Budaya, Ekonomi, MIPA', '2', 'Visi <br>\r\n              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\r\n              <br>\r\n              Misi <br>\r\n              <ol>\r\n                <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris </li>\r\n                <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris </li>\r\n                <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris </li>\r\n                <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris </li>\r\n                <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris </li>\r\n              </ol>');
+INSERT INTO `paslon` VALUES (3, 'UNG Bersatu', 'Rian & Fahri', '', '1', '<p>Visi <br>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. <br>Misi</p>\r\n<ol>\r\n<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris</li>\r\n<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris</li>\r\n<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris</li>\r\n<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris</li>\r\n<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris</li>\r\n</ol>');
+INSERT INTO `paslon` VALUES (4, 'Menuju PERUBAHAN!', 'Kris & Lisa', '', '2', 'Visi <br>\r\n              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\r\n              <br>\r\n              Misi <br>\r\n              <ol>\r\n                <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris </li>\r\n                <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris </li>\r\n                <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris </li>\r\n                <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris </li>\r\n                <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris </li>\r\n              </ol>');
 
 -- ----------------------------
 -- Table structure for pemilih
@@ -156,8 +140,7 @@ CREATE TABLE `pemilih`  (
   PRIMARY KEY (`id_pemilih`) USING BTREE,
   UNIQUE INDEX `nim_pemilih`(`nim_pemilih`) USING BTREE,
   INDEX `id_fakultas`(`id_fakultas`) USING BTREE,
-  INDEX `nim_pemilih_2`(`nim_pemilih`) USING BTREE,
-  CONSTRAINT `pemilih_ibfk_1` FOREIGN KEY (`id_fakultas`) REFERENCES `fakultas` (`id_fakultas`) ON DELETE CASCADE ON UPDATE CASCADE
+  INDEX `nim_pemilih_2`(`nim_pemilih`) USING BTREE
 ) ENGINE = InnoDB AUTO_INCREMENT = 1546 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Compact;
 
 -- ----------------------------
@@ -168,32 +151,32 @@ INSERT INTO `pemilih` VALUES (1513, '531416002', 'Fii', 'qwerty', 'ya', 'ya', '2
 INSERT INTO `pemilih` VALUES (1514, '531416003', 'Faa', 'qwerty', 'ya', 'ya', '2018-03-14 10:17:56', 3);
 INSERT INTO `pemilih` VALUES (1515, '531416004', 'Fee', 'qwerty', 'ya', 'ya', '2018-03-14 10:18:35', 4);
 INSERT INTO `pemilih` VALUES (1516, '531416005', 'Fuu', 'qwerty', 'ya', 'ya', '2018-03-14 10:18:48', 5);
-INSERT INTO `pemilih` VALUES (1517, '531416006', 'Bar', 'qwerty', 'ya', 'tidak', '2018-03-30 10:30:00', 6);
-INSERT INTO `pemilih` VALUES (1518, '531416007', 'Ber', 'qwerty', 'ya', 'tidak', '2018-04-09 13:09:54', 7);
-INSERT INTO `pemilih` VALUES (1519, '531416008', 'Bur', 'qwerty', 'ya', 'tidak', '2018-03-14 10:19:37', 8);
-INSERT INTO `pemilih` VALUES (1520, '531416009', 'Bir', 'qwerty', 'ya', 'tidak', '2018-03-14 10:19:54', 9);
-INSERT INTO `pemilih` VALUES (1522, '531416011', 'Baz', 'qwerty', 'ya', 'tidak', '2018-03-14 11:26:15', 1);
-INSERT INTO `pemilih` VALUES (1523, '531416012', 'Bez', 'qwerty', 'ya', 'ya', '2018-04-13 14:49:46', 2);
-INSERT INTO `pemilih` VALUES (1524, '531416013', 'Buz', 'qwerty', 'ya', 'ya', '2018-03-30 16:56:21', 3);
-INSERT INTO `pemilih` VALUES (1525, '531416014', 'Boz', 'qwerty', 'tidak', 'tidak', '0000-00-00 00:00:00', 4);
-INSERT INTO `pemilih` VALUES (1526, '531416015', 'Biz', 'qwerty', 'tidak', 'tidak', '0000-00-00 00:00:00', 5);
-INSERT INTO `pemilih` VALUES (1527, '531416016', 'Bax', 'qwerty', 'tidak', 'tidak', '0000-00-00 00:00:00', 6);
-INSERT INTO `pemilih` VALUES (1528, '531416017', 'Bex', 'qwerty', 'tidak', 'tidak', '0000-00-00 00:00:00', 7);
-INSERT INTO `pemilih` VALUES (1529, '531416018', 'Bux', 'qwerty', 'tidak', 'tidak', '0000-00-00 00:00:00', 8);
-INSERT INTO `pemilih` VALUES (1530, '531416019', 'Box', 'qwerty', 'tidak', 'tidak', '0000-00-00 00:00:00', 9);
-INSERT INTO `pemilih` VALUES (1531, '531416020', 'Bix', 'qwerty', 'tidak', 'tidak', '0000-00-00 00:00:00', 10);
-INSERT INTO `pemilih` VALUES (1532, '531416021', 'Tux', 'qwerty', 'tidak', 'tidak', '2018-03-11 10:44:28', 1);
-INSERT INTO `pemilih` VALUES (1533, '531416022', 'Tax', 'qwerty', 'tidak', 'tidak', '0000-00-00 00:00:00', 2);
-INSERT INTO `pemilih` VALUES (1534, '531416023', 'Tex', 'qwerty', 'ya', 'tidak', '2018-03-30 10:24:36', 3);
-INSERT INTO `pemilih` VALUES (1535, '531416024', 'Tix', 'qwerty', 'tidak', 'tidak', '0000-00-00 00:00:00', 4);
-INSERT INTO `pemilih` VALUES (1536, '531416025', 'Tox', 'qwerty', 'tidak', 'tidak', '2018-03-12 14:31:34', 5);
-INSERT INTO `pemilih` VALUES (1537, '531416026', 'Muz', 'qwerty', 'tidak', 'tidak', '0000-00-00 00:00:00', 6);
-INSERT INTO `pemilih` VALUES (1538, '531416027', 'Maz', 'qwerty', 'tidak', 'tidak', '0000-00-00 00:00:00', 7);
-INSERT INTO `pemilih` VALUES (1539, '531416028', 'Mez', 'qwerty', 'tidak', 'tidak', '0000-00-00 00:00:00', 8);
-INSERT INTO `pemilih` VALUES (1540, '531416029', 'Miz', 'qwerty', 'tidak', 'tidak', '0000-00-00 00:00:00', 9);
-INSERT INTO `pemilih` VALUES (1541, '531416030', 'Moz', 'qwerty', 'tidak', 'tidak', '0000-00-00 00:00:00', 10);
+INSERT INTO `pemilih` VALUES (1517, '531416006', 'Bar', 'qwerty', 'ya', 'tidak', '2018-03-30 10:30:00', 1);
+INSERT INTO `pemilih` VALUES (1518, '531416007', 'Ber', 'qwerty', 'ya', 'tidak', '2018-04-09 13:09:54', 2);
+INSERT INTO `pemilih` VALUES (1519, '531416008', 'Bur', 'qwerty', 'ya', 'tidak', '2018-03-14 10:19:37', 3);
+INSERT INTO `pemilih` VALUES (1520, '531416009', 'Bir', 'qwerty', 'ya', 'tidak', '2018-03-14 10:19:54', 4);
+INSERT INTO `pemilih` VALUES (1522, '531416011', 'Baz', 'qwerty', 'ya', 'tidak', '2018-03-14 11:26:15', 5);
+INSERT INTO `pemilih` VALUES (1523, '531416012', 'Bez', 'qwerty', 'ya', 'ya', '2018-04-13 14:49:46', 1);
+INSERT INTO `pemilih` VALUES (1524, '531416013', 'Buz', 'qwerty', 'ya', 'ya', '2018-03-30 16:56:21', 2);
+INSERT INTO `pemilih` VALUES (1525, '531416014', 'Boz', 'qwerty', 'tidak', 'tidak', '0000-00-00 00:00:00', 3);
+INSERT INTO `pemilih` VALUES (1526, '531416015', 'Biz', 'qwerty', 'tidak', 'tidak', '0000-00-00 00:00:00', 4);
+INSERT INTO `pemilih` VALUES (1527, '531416016', 'Bax', 'qwerty', 'tidak', 'tidak', '0000-00-00 00:00:00', 5);
+INSERT INTO `pemilih` VALUES (1528, '531416017', 'Bex', 'qwerty', 'tidak', 'tidak', '0000-00-00 00:00:00', 1);
+INSERT INTO `pemilih` VALUES (1529, '531416018', 'Bux', 'qwerty', 'tidak', 'tidak', '0000-00-00 00:00:00', 2);
+INSERT INTO `pemilih` VALUES (1530, '531416019', 'Box', 'qwerty', 'tidak', 'tidak', '0000-00-00 00:00:00', 3);
+INSERT INTO `pemilih` VALUES (1531, '531416020', 'Bix', 'qwerty', 'tidak', 'tidak', '0000-00-00 00:00:00', 4);
+INSERT INTO `pemilih` VALUES (1532, '531416021', 'Tux', 'qwerty', 'tidak', 'tidak', '2018-03-11 10:44:28', 5);
+INSERT INTO `pemilih` VALUES (1533, '531416022', 'Tax', 'qwerty', 'tidak', 'tidak', '0000-00-00 00:00:00', 1);
+INSERT INTO `pemilih` VALUES (1534, '531416023', 'Tex', 'qwerty', 'ya', 'tidak', '2018-03-30 10:24:36', 2);
+INSERT INTO `pemilih` VALUES (1535, '531416024', 'Tix', 'qwerty', 'tidak', 'tidak', '0000-00-00 00:00:00', 3);
+INSERT INTO `pemilih` VALUES (1536, '531416025', 'Tox', 'qwerty', 'tidak', 'tidak', '2018-03-12 14:31:34', 4);
+INSERT INTO `pemilih` VALUES (1537, '531416026', 'Muz', 'qwerty', 'tidak', 'tidak', '0000-00-00 00:00:00', 5);
+INSERT INTO `pemilih` VALUES (1538, '531416027', 'Maz', 'qwerty', 'tidak', 'tidak', '0000-00-00 00:00:00', 1);
+INSERT INTO `pemilih` VALUES (1539, '531416028', 'Mez', 'qwerty', 'tidak', 'tidak', '0000-00-00 00:00:00', 2);
+INSERT INTO `pemilih` VALUES (1540, '531416029', 'Miz', 'qwerty', 'tidak', 'tidak', '0000-00-00 00:00:00', 3);
+INSERT INTO `pemilih` VALUES (1541, '531416030', 'Moz', 'qwerty', 'tidak', 'tidak', '0000-00-00 00:00:00', 4);
 INSERT INTO `pemilih` VALUES (1544, '531416010', 'Bor', 'qwerty', 'ya', 'ya', '2018-03-14 14:30:37', 5);
-INSERT INTO `pemilih` VALUES (1545, '14167064', 'Fachrul Rusli', 'qwerty', 'ya', 'tidak', '2019-07-14 18:40:18', 4);
+INSERT INTO `pemilih` VALUES (1545, '14167064', 'Fachrul Rusli', 'qwerty', 'ya', 'tidak', '2019-07-14 18:40:18', 1);
 
 -- ----------------------------
 -- Table structure for pemilihan

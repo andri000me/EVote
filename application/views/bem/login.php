@@ -11,7 +11,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
 	<style media="screen">
 		body{
-			background-image: url(<?= base_url('assets/img/1.jpg') ?>);
+			
 			background-repeat: no-repeat;
 			background-attachment: fixed;
 			background-position: bottom;
@@ -32,6 +32,15 @@
 	<![endif]-->
 </head>
 <body>
+<video autoplay muted loop id="myVideo" style="position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%; 
+  min-height: 100%;">
+  <source src="<?php echo site_url('assets/video/back2.mp4') ?>" type="video/mp4">
+  Your browser does not support HTML5 video.
+</video>
+
 	<div class="row">
 		<h1>Ayo Memilih!</h1>
 		<h2>Pilih Sesuai Dengan Hati Nurani Anda</h2>
@@ -45,9 +54,6 @@
 
 						<?= form_open('login/index', ['role' => 'form']) ?>
 						<fieldset>
-							<div class="form-group">
-								<?= form_input('nim', $input->nim, ['class' => 'form-control', 'placeholder' => 'NIM']) ?>
-							</div>
 							<div class="form-group">
 								<?= form_input('token', $input->token, ['class' => 'form-control', 'placeholder' => 'Token']) ?>
 							</div>
